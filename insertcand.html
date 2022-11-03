@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Candidate</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 70px 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2>Portal to add Candidates</h2>
+    </center>
+    <div class="formname">
+        <form>
+            <div class="mb-3">
+                <label for="cand-id" class="form-label">Candidate ID</label>
+                <input type="text" class="form-control" id="cand-id">
+            </div>
+            <div class="mb-3">
+                <label for="cand-name" class="form-label">Candidate name</label>
+                <input type="text" class="form-control" id="cand-name">
+            </div>
+            <div class="mb-3">
+                <label for="cand-age" class="form-label">Age</label>
+                <input type="number" class="form-range" min=18 ax=60 id="cand-age">
+            </div>
+            <div class="mb-3">
+                <label for="party-moto" class="form-label">Party Moto</label>
+                <input type="text" class="form-control" id="party-logo">
+            </div>
+            <!-- candidateimage -->
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="cand-img">Upload Candidate Image</label>
+                <input type="file" class="form-control" id="cand-img">
+            </div>
+            <!-- party logo -->
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="party-logo">Upload Party Logo</label>
+                <input type="file" class="form-control" id="party-logo">
+            </div>
+
+            <!-- votes
+            <div class="mb-3">
+                <label for="votes" class="form-label">Votes</label>
+                <input type="text" class="form-control" id="votes">
+            </div> -->
+
+        </form>
+    </div>
+    <br>
+    <br>
+    <center> <button type="button" class="btn btn-dark">Add Candidate</button>
+    </center>
+
+
+
+</body>
+
+</html>

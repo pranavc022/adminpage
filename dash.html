@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 70px 70px;
+        }
+        
+        #tabledetails {
+            border-collapse: collapse;
+            width: 100%;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #588c7e;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #voterdata {
+            padding: 50px 50px;
+        }
+        
+        #candidatedata {
+            padding: 50px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2>ADMIN DASHBOARD</h2>
+    </center>
+    <br><br>
+    <div class="row">
+
+        <div class="col-lg-3">
+            <button type="button" onclick="window.location.href = 'insertcand.html';" class=" btn btn-dark ">Insert Candidate</button>
+        </div>
+
+        <div class="col-lg-3 ">
+            <button type="button " onclick="window.location.href = 'updatecand.html';" class="btn btn-dark ">Update Candidate</button>
+        </div>
+        <div class="col-lg-3 ">
+            <button type="button " onclick="window.location.href = 'delcand.html';" class="btn btn-dark ">Delete Candidate</button>
+        </div>
+        <div class="col-lg-3 ">
+            <button type="button " onclick="window.location.href = 'deluser.html';" class="btn btn-dark ">Delete User</button>
+        </div>
+    </div>
+
+    <div id="voterdata">
+        <center>
+            <h2>VOTER DATA</h2>
+        </center>
+        <table id="tabledetails">
+            <tr>
+                <td>ID</td>
+                <td>Username</td>
+                <td>MailID</td>
+                <td>password</td>
+                <td>Photo</td>
+                <td>Status</td>
+            </tr>
+
+            <!-- use this while implementing php -->
+            <!-- <?php
+            $conn = mysqli_connect("localhost", "root","", "company");
+            die("Connection failed:".$conn -> connect_error);
+            }
+            $sql = "SELECT id, username, usermail, password, photo, status";
+            $result = $conn -> query($sql);
+
+            if($result ->num_rows > 0){
+                while($row = $result-> fetch_assoc()){
+                    echo "<tr><td>".$row["id"]."</tr><td>".$row["username"]."</tr><td>.$row["usermail"]."</tr><td>.$row["password"]."</tr><td>.$row["password"]."</tr><td>.$row["status"]."</tr><td>;
+
+
+                }
+                echo "</table>";
+            }
+            else{
+                echo "0 results fetched"
+            }
+            $conn -> close();
+            
+            ?> -->
+
+        </table>
+
+    </div>
+
+    <div id="candidatedata">
+        <center>
+            <h2>CANDIDATE DATA</h2>
+        </center>
+        <table id="tabledetails">
+            <tr>
+                <td>Candidate ID</td>
+                <td>Candidate Name</td>
+                <td>Age</td>
+                <td>Motto</td>
+                <td>Image</td>
+                <td>Party Logo</td>
+                <td>votes</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
